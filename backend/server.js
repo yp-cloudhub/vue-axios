@@ -33,6 +33,15 @@ app.post('/login', function(req, res) {
   });
 });
 
+app.get('/getToken', function(req, res) {
+  let errors = {};
+
+  res.status(200).send({
+    result: 'success',
+    token: 'refreshed'
+  });
+});
+
 app.post('/board', function(req, res) {
   let validationErrors = {};
 

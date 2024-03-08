@@ -19,7 +19,8 @@ export default {
           context.commit('setToken', response.data.token);
         }
       } catch (e) {
-        alert('아이디 혹은 비밀번호를 확인해주세요.');
+        console.log('아이디 혹은 비밀번호를 확인해주세요.');
+        // alert('아이디 혹은 비밀번호를 확인해주세요.');
       }
     },
     loginWithoutAsync(context, { userId, password }) {
@@ -28,7 +29,8 @@ export default {
           context.commit('setToken', response.data.token);
         }
       }).catch(e => {
-        alert('아이디 혹은 비밀번호를 확인해주세요.');
+        console.log('아이디 혹은 비밀번호를 확인해주세요.');
+        // alert('아이디 혹은 비밀번호를 확인해주세요.');
       });
     }
   }
